@@ -295,8 +295,8 @@ jobs:
        - image: python:3.7-alpine3.11
     steps:
       - checkout
-      - restore_cache:
-          keys: [infra-config]
+      - attach_workspace:
+          at: ~/
       - add_ssh_keys:
           fingerprints: ["d3:d9:99:b5:a8:a3:d3:da:51:73:ce:1e:7e:f6:b1:73"]
       # Add ssh keys with fingerprint
