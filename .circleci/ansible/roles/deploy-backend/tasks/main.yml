@@ -27,7 +27,7 @@
 
 - name: Extract foo.tgz into /var/
   unarchive:
-    src: ./artifact.tar.gz
+    src: /root/project/artifact.tar.gz
     dest: /var/web    
     mode: '0777'
 
