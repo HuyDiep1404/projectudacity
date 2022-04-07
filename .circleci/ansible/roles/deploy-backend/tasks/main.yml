@@ -18,3 +18,27 @@
     global: yes
     production: yes
     state: present
+
+- name: Creates directory
+  file:
+    path: /var/web
+    state: directory    
+    mode: '0777'
+
+- name: Extract foo.tgz into /var/
+  unarchive:
+    src: ./artifact.tar.gz
+    dest: /var/web    
+    mode: '0777'
+
+- name: Install packages based on package.json.
+  npm:
+    path: /var/web
+
+- name: Executing node
+  shell: |
+    pm2 stop default
+
+- name: Executing pm
+  shell: |
+    pm2 start npm -- start
