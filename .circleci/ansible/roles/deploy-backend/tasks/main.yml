@@ -35,10 +35,6 @@
   npm:
     path: /var/web
 
-- name: Executing node
-  shell: |
-    pm2 stop default
-
 - name: Executing pm
   shell: |
     pm2 start npm -- start
