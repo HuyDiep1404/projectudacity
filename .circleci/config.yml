@@ -197,7 +197,7 @@ jobs:
       - restore_cache:
           keys: [deploy-config]
       - add_ssh_keys:
-          fingerprints: ["d3:d9:99:b5:a8:a3:d3:da:51:73:ce:1e:7e:f6:b1:73"]
+          fingerprints: ["e0:27:22:bd:72:fb:e4:a8:55:49:93:bf:ba:72:98:13"]
       - attach_workspace:
           at: ~/
       - run:
@@ -300,7 +300,7 @@ jobs:
       - attach_workspace:
           at: ~/
       - add_ssh_keys:
-          fingerprints: ["d3:d9:99:b5:a8:a3:d3:da:51:73:ce:1e:7e:f6:b1:73"]
+          fingerprints: ["e0:27:22:bd:72:fb:e4:a8:55:49:93:bf:ba:72:98:13"]
       # Add ssh keys with fingerprint
       - run:
           name: Install dependencies
