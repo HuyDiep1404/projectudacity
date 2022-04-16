@@ -37,7 +37,7 @@
 
 - name: Executing pm
   shell: |
-    pm2 start npm -- start
+    pm2 start npm -- start:prod
 
 - name: "add web api configuration."
   become: true
