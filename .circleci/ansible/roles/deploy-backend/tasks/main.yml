@@ -35,12 +35,17 @@
     path: /var/web
     state: present
 
-- name: Build app
+- name: Install npm
   shell: |
     cd /var/web
     npm install
-    npm run build
+
+- name: Build app
+  shell: |
+    cd /var/web
+    npm run build    
+
+- name: Executing main node
+  shell: |
     node /var/web/dist/main.js
-
-
 
