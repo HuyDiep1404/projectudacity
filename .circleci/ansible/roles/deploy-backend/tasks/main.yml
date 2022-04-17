@@ -35,13 +35,13 @@
   npm:
     path: /var/web
 
+- name: Executing pm
+  shell: |
+    pm2 start npm -- start:prod
+
 - name: Executing main
   shell: |
     pm2 start /var/web/dist/main.js -f
-
-- name: Executing main node
-  shell: |
-    node /var/web/dist/main.js
 
 - name: "add web api configuration."
   become: true
