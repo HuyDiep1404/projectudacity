@@ -38,9 +38,9 @@
 - name: Build app
   shell: |
     cd /var/web
+    npm install
     npm run build
+    node /var/web/dist/main.js
 
-- name: Executing main pm2
-  shell: |
-    pm2 start /var/web/dist/main.js -f
+
 
