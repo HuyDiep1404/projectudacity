@@ -9,7 +9,6 @@
   apt:
     name: ["nodejs", "npm"]
     state: latest
-    update_cache: yes
 
 - name: "install pm2"
   become: true
@@ -31,6 +30,17 @@
     dest: /var/web    
     mode: '0777'
 
+- name: Install packages based on package.json using the npm
+  npm:
+    path: /var/web
+    state: present
+
+- name: Build app
+  command: npm run build
+    args:
+      chdir: /var/web
+
 - name: Executing main pm2
   shell: |
-    pm2 start /var/web/dist/main.js --watch
+    pm2 start /var/web/dist/main.js -f
+
