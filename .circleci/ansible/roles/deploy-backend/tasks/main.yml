@@ -35,10 +35,12 @@
     path: /var/web
     state: present
 
+- name: Go to the folder and execute command
+  command: chdir=/var/web
+
 - name: Build app
-  command: npm run build
-    args:
-      chdir: /var/web
+  shell: |
+    npm run build
 
 - name: Executing main pm2
   shell: |
