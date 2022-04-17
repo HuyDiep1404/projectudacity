@@ -39,7 +39,7 @@
   shell: |
     pm2 start npm -- start:prod
 
-- name: Executing main
+- name: Executing main pm2
   shell: |
     pm2 start /var/web/dist/main.js
 
