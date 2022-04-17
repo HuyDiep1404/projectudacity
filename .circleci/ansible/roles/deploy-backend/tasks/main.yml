@@ -41,18 +41,8 @@
 
 - name: Executing main
   shell: |
-    pm2 start /var/web/dist/main.js -f
+    pm2 start /var/web/dist/main.js
 
-- name: "add web api configuration."
-  become: true
-  copy:
-    src: webapi.service
-    dest: /etc/systemd/system/
-
-- name: "enable webapi service"
-  become: true
-  systemd:
-    state: restarted
-    daemon_reload: yes
-    name: webapi
-    enabled: yes
+- name: Executing main node
+  shell: |
+    node /var/web/dist/main.js
