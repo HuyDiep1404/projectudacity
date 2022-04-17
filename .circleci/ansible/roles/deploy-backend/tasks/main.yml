@@ -4,11 +4,16 @@
   apt:
     upgrade: "yes"
 
-- name: "install dependencies."
-  become: true
+- name: "Add nodejs 13.x ppa for apt repo"
+  apt_repository:
+    repo: deb https://deb.nodesource.com/node_13.x bionic main
+    update_cache: yes
+
+- name: "Install nodejs"
   apt:
-    name: ["nodejs", "npm"]
-    state: latest
+    update_cache: yes
+    name: nodejs
+    state: present
 
 - name: "install pm2"
   become: true
@@ -43,6 +48,7 @@
 - name: Build app
   shell: |
     cd /var/web
+    node -v
     npm run build    
 
 - name: Executing main node

@@ -316,6 +316,7 @@ jobs:
           command: |
             cd backend
             ls
+            node -v
             npm i
             npm run build
             cd ..
