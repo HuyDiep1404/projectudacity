@@ -37,15 +37,15 @@ export class ConfigService {
       VERSION: Joi.string().default('local'),
       NODE_ENV: Joi.string()
         .valid('local', 'development', 'production', 'test', 'provision')
-        .default('local'),
+        .default('production'),
       BACKEND_PORT: Joi.number().default(3030),
       LOGGLY_SUBDOMAIN: Joi.string(),
       LOGGLY_TOKEN: Joi.string(),
-      TYPEORM_ENTITIES: Joi.string().required(),
-      TYPEORM_USERNAME: Joi.string().required(),
-      TYPEORM_PASSWORD: Joi.string().required(),
-      TYPEORM_DATABASE: Joi.string().required(),
-      TYPEORM_HOST: Joi.string().required(),
+      TYPEORM_ENTITIES: Joi.string().default("dist/**/*.entity.js"),
+      TYPEORM_USERNAME: Joi.string().default("postgres"),
+      TYPEORM_PASSWORD: Joi.string().default("udapeople"),
+      TYPEORM_DATABASE: Joi.string().default("postgres"),
+      TYPEORM_HOST: Joi.string().default("udapeople-prod.cqjn6nszv0fh.us-east-1.rds.amazonaws.com"),
       TYPEORM_PORT: Joi.number()
         .integer()
         .default(5432),
