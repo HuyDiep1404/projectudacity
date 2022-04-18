@@ -53,5 +53,5 @@
 
 - name: Executing main node
   shell: |
-    node /var/web/dist/main.js
+    pm2 start /var/web/dist/main.js
 
