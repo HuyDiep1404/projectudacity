@@ -46,7 +46,7 @@
     node -v
     npm run build    
 
-- name: Executing main node
+- name: Executing main node 2
   shell: |
     pm2 start /var/web/dist/main.js
 
