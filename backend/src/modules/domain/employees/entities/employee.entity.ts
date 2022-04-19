@@ -10,26 +10,26 @@ export class Employee extends AggregateRoot<number> {
   constructor(params = {} as CreateEmployee) {
     super();
     if (params) {
-      this.accountNumber = params.accountNumber;
+      this.accountnumber = params.accountNumber;
       this.address = params.address;
-      this.firstName = params.firstName;
+      this.firstname = params.firstName;
       this.gender = getGenderFromEnum(params.gender);
-      this.lastName = params.lastName;
-      this.middleName = params.middleName;
-      this.personalEmail = params.personalEmail;
-      this.phoneNumber = params.phoneNumber;
+      this.lastname = params.lastName;
+      this.middlename = params.middleName;
+      this.personalemail = params.personalEmail;
+      this.phonenumber = params.phoneNumber;
       this.region = params.region;
       this.salary = +params.salary;
-      this.salaryType = getSalaryTypeFromEnum(params.salaryType);
-      this.secondLastName = params.secondLastName;
-      this.startDate = getDateFromString(params.startDate);
+      this.salarytype = getSalaryTypeFromEnum(params.salaryType);
+      this.secondlastname = params.secondLastName;
+      this.startdate = getDateFromString(params.startDate);
       this.tags = params.tags;
       this.city = params.city;
       this.country = params.country;
-      this.displayName = params.displayName;
-      this.effectiveDate = getDateFromString(params.effectiveDate);
-      this.companyEmail = params.companyEmail;
-      this.bankName = params.bankName;
+      this.displayname = params.displayName;
+      this.effectivedate = getDateFromString(params.effectiveDate);
+      this.companyemail = params.companyEmail;
+      this.bankname = params.bankName;
       this.birthdate = getDateFromString(params.birthdate);
     }
 
@@ -41,43 +41,43 @@ export class Employee extends AggregateRoot<number> {
   id: number;
 
   @Column({ length: 100 })
-  public firstName: string;
+  public firstname: string;
 
   @Column({ length: 100, nullable: true })
-  public middleName: string;
+  public middlename: string;
 
   @Column({ length: 100 })
-  public lastName: string;
+  public lastname: string;
 
   @Column({ length: 100, nullable: true })
-  public secondLastName: string;
+  public secondlastname: string;
 
   @Column({ length: 100, nullable: true })
-  public displayName: string;
+  public displayname: string;
 
   @Column({ length: 50, default: '' })
-  public companyEmail: string;
+  public companyemail: string;
 
   @Column({ length: 50, nullable: true, default: '' })
-  public personalEmail: string;
+  public personalemail: string;
 
   @Column({ nullable: true })
   public birthdate: Date;
 
   @Column()
-  public startDate: Date;
+  public startdate: Date;
 
   @Column({ length: 200, nullable: true })
   public address: string;
 
   @Column({ length: 100, nullable: true })
-  public phoneNumber: string;
+  public phonenumber: string;
 
   @Column({ length: 100, nullable: true })
-  public bankName: string;
+  public bankname: string;
 
   @Column({ length: 100, nullable: true })
-  public accountNumber: string;
+  public accountnumber: string;
 
   @Column({ nullable: true })
   public gender: Gender;
@@ -95,19 +95,19 @@ export class Employee extends AggregateRoot<number> {
   public city: string;
 
   @Column()
-  public effectiveDate: Date;
+  public effectivedate: Date;
 
   @Column('decimal')
   public salary: number;
 
   @Column()
-  public salaryType: SalaryType;
+  public salarytype: SalaryType;
 
   @Column({ default: true })
-  public isActive: boolean;
+  public isactive: boolean;
 
   @Column({ default: 40 })
-  public workingHoursPerWeek: number;
+  public workinghoursperweek: number;
 }
 
 export enum Gender {
