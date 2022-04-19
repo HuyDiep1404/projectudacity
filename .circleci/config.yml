@@ -435,6 +435,7 @@ jobs:
             # You can use any condition like:
             # if [[ "${CIRCLE_WORKFLOW_ID:0:7}" != "${OldWorkflowID}" ]]
             # if [[ "${OldWorkflowID}" =~ "${STACKS[@]}"  ]]
+            export OldWorkflowID: "${CIRCLE_WORKFLOW_ID:0:7}"
             if [[ "${CIRCLE_WORKFLOW_ID:0:7}" =~ "${OldWorkflowID}" ]]
             then
             echo "-----------Delete Confirmed-----------"
