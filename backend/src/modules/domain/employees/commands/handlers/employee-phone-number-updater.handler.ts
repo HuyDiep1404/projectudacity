@@ -18,7 +18,7 @@ export class EmployeePhoneNumberUpdater extends BaseCommandHandler<UpdateEmploye
 
     const employee = await this.employeeRepository.findById(employeeId);
 
-    employee.phoneNumber = phoneNumber;
+    employee.phonenumber = phoneNumber;
 
     await this.employeeRepository.save(employee);
   }

@@ -23,10 +23,10 @@ export class EmployeeNameUpdater extends BaseCommandHandler<UpdateEmployeeName, 
 
     const employee = await this.employeeRepository.findById(employeeId);
 
-    employee.firstName = firstName;
-    employee.middleName = middleName;
-    employee.lastName = lastName;
-    employee.secondLastName = secondLastName;
+    employee.firstname = firstName;
+    employee.middlename = middleName;
+    employee.lastname = lastName;
+    employee.secondlastname = secondLastName;
 
     await this.employeeRepository.save(employee);
   }

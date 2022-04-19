@@ -18,7 +18,7 @@ export class EmployeeDisplayNameUpdater extends BaseCommandHandler<UpdateEmploye
 
     const employee = await this.employeeRepository.findById(employeeId);
 
-    employee.displayName = displayName;
+    employee.displayname = displayName;
 
     await this.employeeRepository.save(employee);
   }

@@ -14,7 +14,7 @@ export class EmployeeActivator extends BaseCommandHandler<ActivateEmployee, void
   async handle(command: ActivateEmployee): Promise<void> {
     const { employeeId, isActive } = command;
     const employee = await this.employeeRepository.findById(employeeId);
-    employee.isActive = isActive;
+    employee.isactive = isActive;
 
     await this.employeeRepository.save(employee);
   }

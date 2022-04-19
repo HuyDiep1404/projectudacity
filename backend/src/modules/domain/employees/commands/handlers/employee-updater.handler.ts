@@ -40,25 +40,25 @@ export class EmployeeUpdater extends BaseCommandHandler<UpdateEmployee, void> {
       key => SalaryType[key] === salaryType,
     );
 
-    employee.firstName = firstName;
-    employee.middleName = middleName;
-    employee.lastName = lastName;
-    employee.secondLastName = secondLastName;
-    employee.displayName = displayName;
-    employee.companyEmail = companyEmail;
-    employee.personalEmail = personalEmail;
+    employee.firstname = firstName;
+    employee.middlename = middleName;
+    employee.lastname = lastName;
+    employee.secondlastname = secondLastName;
+    employee.displayname = displayName;
+    employee.companyemail = companyEmail;
+    employee.personalemail = personalEmail;
     employee.birthdate = moment(birthdate)
       .utc()
       .format();
     employee.address = address;
-    employee.phoneNumber = phoneNumber;
+    employee.phonenumber = phoneNumber;
     employee.tags = tags;
     employee.country = country;
     employee.region = region;
     employee.city = city;
     employee.salary = +salary;
-    employee.salaryType = SalaryType[salaryTypeKey];
-    employee.effectiveDate = moment(effectiveDate)
+    employee.salarytype = SalaryType[salaryTypeKey];
+    employee.effectivedate = moment(effectiveDate)
       .utc()
       .format();
 

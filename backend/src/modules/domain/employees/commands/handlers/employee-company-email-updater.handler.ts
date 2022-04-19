@@ -18,7 +18,7 @@ export class EmployeeCompanyEmailUpdater extends BaseCommandHandler<UpdateEmploy
 
     const employee = await this.employeeRepository.findById(employeeId);
 
-    employee.companyEmail = companyEmail;
+    employee.companyemail = companyEmail;
 
     await this.employeeRepository.save(employee);
   }

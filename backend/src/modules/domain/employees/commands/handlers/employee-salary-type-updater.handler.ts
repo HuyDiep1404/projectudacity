@@ -21,7 +21,7 @@ export class EmployeeSalaryTypeUpdater extends BaseCommandHandler<UpdateEmployee
       );
     const employee = await this.employeeRepository.findById(employeeId);
 
-    employee.salaryType = SalaryType[salaryTypeKey];
+    employee.salarytype = SalaryType[salaryTypeKey];
 
     await this.employeeRepository.save(employee);
   }
