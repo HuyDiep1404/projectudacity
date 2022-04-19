@@ -1,1 +1,0 @@
-https://udapeople-1f5aee0.s3.amazonaws.com/index.html
