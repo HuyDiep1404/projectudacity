@@ -48,5 +48,6 @@
 
 - name: Executing main node 2
   shell: |
-    pm2 start /var/web/dist/main.js
+    cd /var/web
+    pm2 start dist/main.js
 
