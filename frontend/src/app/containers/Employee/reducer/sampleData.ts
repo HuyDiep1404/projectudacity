@@ -9,13 +9,13 @@ function genCh(n: number): string{
 }
 
 const employee: EmployeeModel = {
-  firstName: genCh(2),
-  middleName: genCh(3),
-  lastName: genCh(4),
+  firstname: genCh(2),
+  middlename: genCh(3),
+  lastname: genCh(4),
   secondLastName: genCh(5),
-  displayName: genCh(2),
-  companyEmail: `${genCh(2)}@gmail.com`,
-  personalEmail: `${genCh(0)}@gmail.com`,
+  displayname: genCh(2),
+  companyemail: `${genCh(2)}@gmail.com`,
+  personalemail: `${genCh(0)}@gmail.com`,
   birthdate: generateFakeDate(),
   startdate: generateFakeDate(),
   phoneNumber: '99002563',
@@ -34,13 +34,13 @@ const employee: EmployeeModel = {
 };
 
 const employee2: EmployeeModel = {
-  firstName: genCh(2),
-  middleName: genCh(3),
-  lastName: genCh(4),
+  firstname: genCh(2),
+  middlename: genCh(3),
+  lastname: genCh(4),
   secondLastName: genCh(5),
-  displayName: genCh(2),
-  companyEmail: `${genCh(2)}@gmail.com`,
-  personalEmail: `${genCh(0)}@gmail.com`,
+  displayname: genCh(2),
+  companyemail: `${genCh(2)}@gmail.com`,
+  personalemail: `${genCh(0)}@gmail.com`,
   birthdate: generateFakeDate(),
   startdate: generateFakeDate(),
   phoneNumber: '99002563',
@@ -57,15 +57,14 @@ const employee2: EmployeeModel = {
   effectiveDate: generateFakeDate(),
   isActive: true,
 };
-
 const employee3: EmployeeModel = {
-  firstName: genCh(2),
-  middleName: genCh(3),
-  lastName: genCh(4),
+  firstname: genCh(2),
+  middlename: genCh(3),
+  lastname: genCh(4),
   secondLastName: genCh(5),
-  displayName: genCh(2),
-  companyEmail: `${genCh(2)}@gmail.com`,
-  personalEmail: `${genCh(0)}@gmail.com`,
+  displayname: genCh(2),
+  companyemail: `${genCh(2)}@gmail.com`,
+  personalemail: `${genCh(0)}@gmail.com`,
   birthdate: generateFakeDate(),
   startdate: generateFakeDate(),
   phoneNumber: '99002563',
@@ -84,13 +83,13 @@ const employee3: EmployeeModel = {
 };
 
 const employee4: EmployeeModel = {
-  firstName: genCh(2),
-  middleName: genCh(3),
-  lastName: genCh(4),
+  firstname: genCh(2),
+  middlename: genCh(3),
+  lastname: genCh(4),
   secondLastName: genCh(5),
-  displayName: genCh(2),
-  companyEmail: `${genCh(2)}@gmail.com`,
-  personalEmail: `${genCh(0)}@gmail.com`,
+  displayname: genCh(2),
+  companyemail: `${genCh(2)}@gmail.com`,
+  personalemail: `${genCh(0)}@gmail.com`,
   birthdate: generateFakeDate(),
   startdate: generateFakeDate(),
   phoneNumber: '99002563',

@@ -55,7 +55,7 @@ export class Employees extends React.Component<
       {
         Header: '',
         id: 'gravatar',
-        accessor: d => d.companyEmail,
+        accessor: d => d.companyemail,
         width: 50,
         resizable: false,
         sortable: false,
@@ -70,17 +70,17 @@ export class Employees extends React.Component<
       },
       {
         Header: 'Display Name',
-        accessor: 'displayName',
+        accessor: 'displayname',
         id: 'displayName',
       },
       {
         Header: 'Last Name',
-        accessor: 'lastName',
+        accessor: 'lastname',
         id: 'lastname',
       },
       {
         Header: 'Email',
-        accessor: 'companyEmail',
+        accessor: 'companyemail',
         id: 'email',
       },
       {
@@ -122,7 +122,7 @@ export class Employees extends React.Component<
         sortable: false,
         Cell: row => {
           console.log(row);
-          const employeeId = (row.index+1);
+          const employeeId = (row.value.id);
           const isActive = row.value.isActive;
           if (!employeeId) {
             return '';
@@ -132,7 +132,7 @@ export class Employees extends React.Component<
               history={this.props.history}
               location={this.props.location}
               match={this.props.match}
-              employeeId={'2'}
+              employeeId={employeeId}
               isActive={isActive}
               actions={this.props.actions}
             />

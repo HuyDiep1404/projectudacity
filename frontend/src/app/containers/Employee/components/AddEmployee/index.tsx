@@ -139,13 +139,13 @@ class AddEmployee extends Component<AddEmployee.Props> {
     event.stopPropagation();
 
     const payload: EmployeeModel = {
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
-      middleName: this.state.middleName,
+      firstname: this.state.firstName,
+      lastname: this.state.lastName,
+      middlename: this.state.middleName,
       secondLastName: this.state.secondLastName,
-      displayName: this.state.displayName,
-      companyEmail: this.state.companyEmail,
-      personalEmail: this.state.personalEmail,
+      displayname: this.state.displayName,
+      companyemail: this.state.companyEmail,
+      personalemail: this.state.personalEmail,
       gender: this.state.gender,
       phoneNumber: this.state.phoneNumber,
       address: this.state.address,

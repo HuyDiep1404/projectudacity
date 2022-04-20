@@ -9,13 +9,13 @@ export enum SalaryType {
 }
 
 export interface EmployeeModel {
-  firstName: string;
-  middleName: string;
-  lastName: string;
+  firstname: string;
+  middlename: string;
+  lastname: string;
   secondLastName: string;
-  displayName: string;
-  companyEmail: string;
-  personalEmail: string;
+  displayname: string;
+  companyemail: string;
+  personalemail: string;
   birthdate: Date;
   startdate: Date;
   phoneNumber: string;
