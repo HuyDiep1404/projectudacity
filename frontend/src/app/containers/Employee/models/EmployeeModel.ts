@@ -17,13 +17,13 @@ export interface EmployeeModel {
   companyEmail: string;
   personalEmail: string;
   birthdate: Date;
-  startDate: Date;
+  startdate: Date;
   phoneNumber: string;
   address: string;
   bankName: string;
   accountNumber: string;
   gender: Gender;
-  tags: string;
+  tags: any;
   country: string;
   region: string;
   city: string;

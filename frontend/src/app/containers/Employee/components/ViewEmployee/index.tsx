@@ -117,7 +117,7 @@ export class ViewEmployee extends Component<
         effectiveDate: employee.effectiveDate,
         isActive: employee.isActive,
         gender: employee.gender,
-        startDate: employee.startDate,
+        startDate: employee.startdate,
         bankName: employee.bankName,
         accountNumber: employee.accountNumber,
       });

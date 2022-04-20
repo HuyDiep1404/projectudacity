@@ -152,7 +152,7 @@ class AddEmployee extends Component<AddEmployee.Props> {
       bankName: this.state.bankName,
       accountNumber: this.state.accountNumber,
       birthdate: this.state.birthdate,
-      startDate: this.state.startDate,
+      startdate: this.state.startDate,
       tags: JSON.stringify(this.state.tags),
       country: this.state.country,
       region: this.state.region,

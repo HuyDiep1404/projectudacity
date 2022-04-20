@@ -102,11 +102,11 @@ export class Employees extends React.Component<
       {
         Header: 'Start Date',
         id: 'startDate',
-        accessor: ({ startDate }: EmployeeModel) => {
-          if (!startDate) {
+        accessor: ({ startdate }: EmployeeModel) => {
+          if (!startdate) {
             return '';
           }
-          return moment(startDate).format(EmployeeModel.dateFormat);
+          return moment(startdate).format(EmployeeModel.dateFormat);
         },
       },
       {

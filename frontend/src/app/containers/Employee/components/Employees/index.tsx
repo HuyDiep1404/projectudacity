@@ -19,6 +19,7 @@ import {
   Button,
   ActionsMenu,
 } from 'app/components';
+import { employeesSampleData } from "../../reducer/sampleData";
 
 export namespace Employees {
   export interface Props extends RouteComponentProps<void> {
@@ -75,7 +76,7 @@ export class Employees extends React.Component<
       {
         Header: 'Last Name',
         accessor: 'lastName',
-        id: 'lastName',
+        id: 'lastname',
       },
       {
         Header: 'Email',
@@ -89,7 +90,7 @@ export class Employees extends React.Component<
           if (!tags) {
             return '';
           }
-          const obj: any[] = JSON.parse(tags);
+          const obj: any = tags;
           return obj.join(', ');
         },
       },
@@ -106,11 +107,11 @@ export class Employees extends React.Component<
       {
         Header: 'Start Date',
         id: 'startDate',
-        accessor: ({ startDate }: EmployeeModel) => {
-          if (!startDate) {
+        accessor: ({ startdate }: EmployeeModel) => {
+          if (!startdate) {
             return '';
           }
-          return moment(startDate).format(EmployeeModel.dateFormat);
+          return moment(startdate).format(EmployeeModel.dateFormat);
         },
       },
       {
@@ -120,7 +121,8 @@ export class Employees extends React.Component<
         accessor: (e: EmployeeRowModel) => e,
         sortable: false,
         Cell: row => {
-          const employeeId = row.value.id;
+          console.log(row);
+          const employeeId = (row.index+1);
           const isActive = row.value.isActive;
           if (!employeeId) {
             return '';
@@ -130,7 +132,7 @@ export class Employees extends React.Component<
               history={this.props.history}
               location={this.props.location}
               match={this.props.match}
-              employeeId={employeeId}
+              employeeId={'2'}
               isActive={isActive}
               actions={this.props.actions}
             />
@@ -176,11 +178,10 @@ export class Employees extends React.Component<
 
   render = () => {
     const { isFetching, employees, searchText } = this.props;
-
+    console.log(employees);
+console.log(employeesSampleData);
     const tableProps: Table.Props = {
-      data: this.state.showActiveEmployees
-        ? employees.filter(e => e.isActive)
-        : employees.filter(e => !e.isActive),
+      data: employees.length === 0 && !isFetching? employeesSampleData: employees,
       loading: isFetching,
       columns: this.getTableColumns(),
       style: { marginTop: '0px', paddingLeft: '15px', verticalAlign: 'middle' },
