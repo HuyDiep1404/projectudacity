@@ -1,2 +1,2 @@
 URL01: https://github.com/bahuy1404/projectudacity.git
-URL02: 
+URL02: http://udapeople-0f2e3ac.s3-website-us-east-1.amazonaws.com/#/employees
