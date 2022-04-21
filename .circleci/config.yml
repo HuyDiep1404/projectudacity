@@ -168,7 +168,7 @@ jobs:
               --stack-name "udapeople-frontend-${CIRCLE_WORKFLOW_ID:0:7}" \
               --parameter-overrides ID="${CIRCLE_WORKFLOW_ID:0:7}"  \
               --tags project=udapeople
-              
+            echo CORS_WHITELIST="http://${BACKEND_IP}:3030" >> backend/.env
       - run:
           name: Add back-end ip to ansible inventory
           command: |
@@ -196,7 +196,7 @@ jobs:
       - restore_cache:
           keys: [deploy-config]
       - add_ssh_keys:
-          fingerprints: ["9a:f3:ac:7b:6f:ab:42:ec:7d:f5:fc:11:bb:ff:d6:f4"]
+          fingerprints: ["38:a1:8d:7b:d2:83:12:8d:db:1a:55:96:18:4d:0e:82"]
       - attach_workspace:
           at: ~/    
       - run:
@@ -299,7 +299,7 @@ jobs:
       - attach_workspace:
           at: ~/
       - add_ssh_keys:
-          fingerprints: ["9a:f3:ac:7b:6f:ab:42:ec:7d:f5:fc:11:bb:ff:d6:f4"]
+          fingerprints: ["38:a1:8d:7b:d2:83:12:8d:db:1a:55:96:18:4d:0e:82"]
       # Add ssh keys with fingerprint
       - run:
           name: Install dependencies

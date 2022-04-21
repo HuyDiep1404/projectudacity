@@ -48,9 +48,9 @@ export class EmployeeController {
     @Body() employeeRequest: CreateEmployeeRequest,
   ): Promise<Employee> {
     const employee = await this.employeeRepository.findByNames(
-      employeeRequest.firstName,
-      employeeRequest.middleName,
-      employeeRequest.lastName,
+      employeeRequest.firstname,
+      employeeRequest.middlename,
+      employeeRequest.lastname,
       employeeRequest.secondLastName,
     );
 
@@ -66,15 +66,15 @@ export class EmployeeController {
 
     return await this.commandDispatcher.execute(
       new CreateEmployee(
-        employeeRequest.firstName,
-        employeeRequest.middleName,
-        employeeRequest.lastName,
+        employeeRequest.firstname,
+        employeeRequest.middlename,
+        employeeRequest.lastname,
         employeeRequest.secondLastName,
-        employeeRequest.displayName,
-        employeeRequest.companyEmail,
-        employeeRequest.personalEmail,
+        employeeRequest.displayname,
+        employeeRequest.companyemail,
+        employeeRequest.personalemail,
         employeeRequest.birthdate,
-        employeeRequest.startDate,
+        employeeRequest.startdate,
         employeeRequest.address,
         employeeRequest.phoneNumber,
         employeeRequest.bankName,
