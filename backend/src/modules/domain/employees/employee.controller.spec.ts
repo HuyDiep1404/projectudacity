@@ -64,9 +64,9 @@ describe('Employee Controller', () => {
       // Arrange
       const request = {
         employeeId: 100,
-        firstName: 'Jimmy',
-        lastName: 'Ramos',
-        middleName: 'Josue',
+        firstname: 'Jimmy',
+        lastlame: 'Ramos',
+        middlename: 'Josue',
         secondLastName: 'Banegas',
       };
 
@@ -100,7 +100,7 @@ describe('Employee Controller', () => {
       // Arrange
       const request = {
         employeeId: 100,
-        displayName: 'Jimmy'
+        displayname: 'Jimmy'
       };
 
       // Act
@@ -145,7 +145,7 @@ describe('Employee Controller', () => {
       // Arrange
       const request = {
         employeeId: 100,
-        personalEmail: 'jimmybanegas93@gmail.com',
+        personalemail: 'jimmybanegas93@gmail.com',
         };
 
       // Act
@@ -160,7 +160,7 @@ describe('Employee Controller', () => {
       // Arrange
       const request = {
         employeeId: 100,
-        companyEmail: 'jimmyramos@acklenavenue.com',
+        companyemail: 'jimmyramos@acklenavenue.com',
         };
 
       // Act
