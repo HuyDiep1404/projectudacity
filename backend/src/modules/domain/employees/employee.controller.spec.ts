@@ -34,20 +34,20 @@ describe('Employee Controller', () => {
         birthdate: '1993-14-04',
         city: 'San Pedro Sula',
         country: 'Honduras',
-        displayname: 'Jimmy',
+        displayName: 'Jimmy',
         effectiveDate: '2018-22-10',
-        companyemail: 'jimmyramos@acklenavenue.com',
-        firstname: 'Jimmy',
+        companyEmail: 'jimmyramos@acklenavenue.com',
+        firstName: 'Jimmy',
         gender: 'Male',
-        lastname: 'Ramos',
-        middlename: 'Josue',
-        personalemail: 'jimmybanegas93@gmail.com',
+        lastName: 'Ramos',
+        middleName: 'Josue',
+        personalEmail: 'jimmybanegas93@gmail.com',
         phoneNumber: '50494621230',
         region: 'Cortes',
         salary: '10',
         salaryType: 'Montly',
         secondLastName: 'Banegas',
-        startdate: '2019-22-02',
+        startDate: '2019-22-02',
         tags: 'Developer',
       };
 
@@ -64,9 +64,9 @@ describe('Employee Controller', () => {
       // Arrange
       const request = {
         employeeId: 100,
-        firstname: 'Jimmy',
-        lastlame: 'Ramos',
-        middlename: 'Josue',
+        firstName: 'Jimmy',
+        lastName: 'Ramos',
+        middleName: 'Josue',
         secondLastName: 'Banegas',
       };
 
@@ -100,7 +100,7 @@ describe('Employee Controller', () => {
       // Arrange
       const request = {
         employeeId: 100,
-        displayname: 'Jimmy'
+        displayName: 'Jimmy'
       };
 
       // Act
@@ -145,7 +145,7 @@ describe('Employee Controller', () => {
       // Arrange
       const request = {
         employeeId: 100,
-        personalemail: 'jimmybanegas93@gmail.com',
+        personalEmail: 'jimmybanegas93@gmail.com',
         };
 
       // Act
@@ -160,7 +160,7 @@ describe('Employee Controller', () => {
       // Arrange
       const request = {
         employeeId: 100,
-        companyemail: 'jimmyramos@acklenavenue.com',
+        companyEmail: 'jimmyramos@acklenavenue.com',
         };
 
       // Act

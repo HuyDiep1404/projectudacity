@@ -1,13 +1,13 @@
 export interface CreateEmployeeRequest {
-  firstname: string;
-  middlename: string;
-  lastname: string;
+  firstName: string;
+  middleName: string;
+  lastName: string;
   secondLastName: string;
-  displayname: string;
-  companyemail: string;
-  personalemail: string;
+  displayName: string;
+  companyEmail: string;
+  personalEmail: string;
   birthdate: string;
-  startdate: string;
+  startDate: string;
   address: string;
   phoneNumber: string;
   bankName: string;
