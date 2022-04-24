@@ -11,7 +11,6 @@
     name: "nodejs"
     state: latest
 
-    
 - name: "install pm2"
   become: true
   npm:
