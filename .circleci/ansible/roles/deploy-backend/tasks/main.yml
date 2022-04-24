@@ -7,7 +7,7 @@
 - name: "Install nodejs"
   apt:
     update_cache: yes
-    name: nodejs
+    name: [nodejs, npm]
     state: latest
 
 - name: "install pm2"
