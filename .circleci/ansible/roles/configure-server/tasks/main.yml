@@ -5,11 +5,8 @@
     upgrade: "yes"
 
 - name: "install dependencies."
-  apt:
-    global: yes
-    update_cache: yes
-    name: "nodejs"
-    state: present
+  shell: |
+    apk add --update curl nodejs npm
 
 - name: "install pm2"
   become: true
