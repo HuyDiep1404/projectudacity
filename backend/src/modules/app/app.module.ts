@@ -13,10 +13,12 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigService } from '../config/config.service';
 import { OrdersModule } from '../domain/orders/orders.module';
 import { EmployeeModule } from '../domain/employees/employee.module';
+import { EmployeeeModule } from '../domain/employeee/employeee.module';
 
 @Module({
   imports: [
     StatusModule,
+    EmployeeeModule,
     ConfigModule,
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
@@ -24,7 +26,7 @@ import { EmployeeModule } from '../domain/employees/employee.module';
       useFactory: (config: ConfigService) => config.TypeOrmDatabase,
     }),
     OrdersModule,
-    EmployeeModule,
+    EmployeeModule
   ],
   controllers: [StatusController],
   providers: [AppService, AppLogger],

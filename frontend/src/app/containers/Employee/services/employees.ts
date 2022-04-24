@@ -13,10 +13,12 @@ type employeeUpdateTypes = EmployeeUpdateStringFieldModel
   
 export class EmployeesService {
   private readonly employeesUrl: string;
+  private readonly employeeeUrl: string;
   private readonly httpService: HttpService;
 
   constructor(baseUrl = process.env.API_URL) {
     this.employeesUrl = `${baseUrl}/api/Employees`;
+    this.employeeeUrl = `${baseUrl}/api/employeee`;
     this.httpService = new HttpService();
   }
 
@@ -32,7 +34,7 @@ export class EmployeesService {
   }
 
   createEmployee(employee: EmployeeModel) {
-    return this.httpService.post(this.employeesUrl, employee);
+    return this.httpService.post(this.employeeeUrl, employee);
   }
 
   updateField = (id: string, payload:employeeUpdateTypes , 

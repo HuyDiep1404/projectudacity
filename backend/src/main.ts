@@ -18,10 +18,10 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, new ExpressAdapter(server), {
     logger,
   });
-  app.useGlobalPipes(new ValidationPipe({ transform: true, whitelist: true }));
+  //app.useGlobalPipes(new ValidationPipe({ transform: true, whitelist: true }));
   const apiVersionPrefix: string = process.env.API_VERSION || 'api';
   app.setGlobalPrefix(apiVersionPrefix);
-  app.useGlobalInterceptors(new TransformInterceptor());
+  //app.useGlobalInterceptors(new TransformInterceptor());
   const options = new DocumentBuilder()
     .setTitle('Glee2')
     .setDescription('Glee2 API')
@@ -46,7 +46,7 @@ async function bootstrap() {
     },
   };
   app.use(cors(corsOptions));
-  app.useGlobalFilters(new ErrorFilter());
+  //app.useGlobalFilters(new ErrorFilter());
   await app.listen(config.PORT);
   logger.log(`Listening on port ${config.PORT}.`);
 }
