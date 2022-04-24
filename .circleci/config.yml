@@ -211,6 +211,8 @@ jobs:
           name: Configure server
           command: |
             echo $(pwd)
+            node -v
+            npm -v
             cd .circleci/ansible
             echo $(pwd)
             ls
