@@ -8,4 +8,5 @@ import { Employee } from '../employees/entities/employee.entity';
   imports:[TypeOrmModule.forFeature([Employee]), CqrsModule],
   controllers: [EmployeeeController]
 })
+
 export class EmployeeeModule {}
