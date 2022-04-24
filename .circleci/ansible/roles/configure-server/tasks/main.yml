@@ -1,3 +1,16 @@
+---
+- name: "upgrade packages."
+  become: true
+  apt:
+    upgrade: "yes"
+
+- name: "install dependencies."
+  become: true
+  apt:
+    global: yes
+    name: "nodejs"
+    state: latest
+
 - name: "install pm2"
   become: true
   npm:
