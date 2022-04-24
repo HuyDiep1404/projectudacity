@@ -193,6 +193,8 @@ jobs:
       - image: python:3.7-alpine3.11
     steps:
       - checkout
+      - restore_cache:
+          keys: [deploy-config]
       - add_ssh_keys:
           fingerprints: ["64:a6:b9:c2:1d:93:9c:22:23:89:a3:f0:af:bf:97:24"]
       - attach_workspace:
@@ -200,6 +202,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
+            apk add nodejs-current
             apk add --update curl nodejs npm
             apk add --update ansible
             pip install --upgrade pip
@@ -253,8 +256,6 @@ jobs:
       -  image: python:3.7-alpine3.11
     steps:
       - checkout
-      - restore_cache:
-          keys: [deploy-config]
       - attach_workspace:
           at: ~/
       - run:
@@ -270,7 +271,6 @@ jobs:
       - run:
           name: Get backend url
           command: |
-            node -v
             # your code here
             # export API_URL="http://${BACKEND_IP}:3030"
             # echo "${API_URL}"

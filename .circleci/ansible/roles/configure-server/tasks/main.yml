@@ -8,8 +8,8 @@
   become: true
   apt:
     global: yes
-    name: "nodejs"
-    state: latest
+    name: ["nodejs", "npm"]
+    state: present
 
 - name: "install pm2"
   become: true
