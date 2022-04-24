@@ -5,7 +5,6 @@
     upgrade: "yes"
 
 - name: "install dependencies."
-  become: true
   apt:
     update_cache: yes
     name: ["nodejs", "npm"]
