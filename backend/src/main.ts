@@ -38,7 +38,8 @@ async function bootstrap() {
     origin(origin, callback) {
       const isOriginAllowed = whitelist.indexOf(origin) !== -1;
       const allowAccessAnyway = whitelist.length === 0;
-      if (isOriginAllowed || allowAccessAnyway) {
+      const iscloudfront= origin.toString().indexOf("cloudfront.net")>=0;
+      if (isOriginAllowed || allowAccessAnyway || iscloudfront) {
         callback(null, true);
       } else {
         callback(new Error('Not allowed by CORS'));
