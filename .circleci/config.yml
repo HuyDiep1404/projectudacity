@@ -317,6 +317,11 @@ jobs:
       - run:
           name: Deploy backend
           command: |
+            export BACKEND_IP=$(aws ec2 describe-instances \
+            --query 'Reservations[*].Instances[*].PublicIpAddress' \
+            --filters "Name=tag:project,Values=udapeople" \
+            --output text)
+            echo CORS_WHITELIST="http://${BACKEND_IP}:3030" >> backend/.env
             cd backend
             ls
             node -v
@@ -358,9 +363,7 @@ jobs:
             --filters "Name=tag:project,Values=udapeople" \
             --output text)
             export API_URL="http://${BACKEND_IP}:3030"
-            echo "${API_URL}"
-            cd ~
-            echo CORS_WHITELIST="http://${BACKEND_IP}:3030" >> backend/.env
+            echo "${API_URL}"            
       - run:
           name: Backend smoke test.
           command: |
