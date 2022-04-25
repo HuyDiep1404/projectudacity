@@ -6,6 +6,7 @@ import { EmployeeModel,
   EmployeeUpdateAddressModel, 
   EmployeeUpdateNumberFieldModel
 } from '../models/EmployeeModel';
+import { EmployeeAddModel, } from '../models/EmployeeAddModel';
 
 type employeeUpdateTypes = EmployeeUpdateStringFieldModel
   | EmployeeUpdateDateFieldModel
@@ -33,7 +34,7 @@ export class EmployeesService {
     };
   }
 
-  createEmployee(employee: EmployeeModel) {
+  createEmployee(employee: EmployeeAddModel) {
     return this.httpService.post(this.employeeeUrl, employee);
   }
 

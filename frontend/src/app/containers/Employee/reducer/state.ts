@@ -1,7 +1,7 @@
-import { EmployeeAddModel } from '../models/EmployeeAddModel';
+import { EmployeeModel } from '../models/EmployeeModel';
 
 export interface EmployeeState {
     isFetching: boolean;
     errorMessage: string;
-    employees: EmployeeAddModel[];
+    employees: EmployeeModel[];
   }
