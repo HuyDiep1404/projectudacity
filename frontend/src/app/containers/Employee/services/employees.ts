@@ -34,10 +34,12 @@ export class EmployeesService {
     };
   }
 
-  createEmployee(employee: EmployeeAddModel) {
+  createEmployee(employee: EmployeeModel) {
     return this.httpService.post(this.employeeeUrl, employee);
   }
-
+  createEmployee2(employee: EmployeeAddModel) {
+    return this.httpService.post(this.employeeeUrl, employee);
+  }
   updateField = (id: string, payload:employeeUpdateTypes , 
     fieldName: string) => {
     let payloadReady:{[key:string]:string|Date|number} = {};

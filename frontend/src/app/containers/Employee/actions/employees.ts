@@ -114,7 +114,7 @@ export namespace EmployeeActions {
       dispatch(addEmployeeRequest());
       try {
         const employeeService = new EmployeesService();
-        const response = await employeeService.createEmployee(payload);
+        const response = await employeeService.createEmployee2(payload);
         dispatch(addEmployeeSuccess(response));
         dispatch(push('/employees'));
         showSuccessNotification(text.CHANGES_SAVED);
