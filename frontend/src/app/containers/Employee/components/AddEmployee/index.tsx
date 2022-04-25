@@ -141,7 +141,7 @@ class AddEmployee extends Component<AddEmployee.Props> {
     const payload: EmployeeAddModel = {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
-      middlename: this.state.middleName,
+      middleName: this.state.middleName,
       secondLastName: this.state.secondLastName,
       displayName: this.state.displayName,
       companyEmail: this.state.companyEmail,

@@ -9,7 +9,7 @@ export enum SalaryType {
   }
 export interface EmployeeAddModel {
     firstName: string;
-    middlename: string;
+    middleName: string;
     lastName: string;
     secondLastName: string;
     displayName: string;

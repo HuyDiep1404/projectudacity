@@ -8,6 +8,7 @@ import {
   EmployeeUpdateNamesModel,
   EmployeeUpdateAddressModel,
 } from '../models/EmployeeModel';
+import {EmployeeAddModel } from '../models/EmployeeAddModel';
 import { EmployeesService, GetEmployeesResponse } from '../services/employees';
 import { push } from 'react-router-redux';
 import { showErrorNotification, showSuccessNotification } from 'app/utils';
@@ -92,7 +93,7 @@ export namespace EmployeeActions {
     };
   }
 
-  export const addEmployee = (payload: EmployeeModel) => {
+  export const addEmployee = (payload: EmployeeAddModel) => {
     return async (dispatch: Dispatch) => {
       dispatch(addEmployeeRequest());
       try {
