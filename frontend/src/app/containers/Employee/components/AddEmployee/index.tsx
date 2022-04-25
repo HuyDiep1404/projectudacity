@@ -3,7 +3,7 @@ import Gravatar from 'react-gravatar';
 import DatePicker from 'react-datepicker';
 
 import 'react-datepicker/dist/react-datepicker.css';
-import { Gender, EmployeeAddModel,EmployeeModel, SalaryType } from '../../models/EmployeeModel';
+import { Gender,EmployeeAddModel, SalaryType } from '../../models/EmployeeAddModel';
 import { EmployeeState } from '../../reducer/state';
 import { EmployeeActions } from '../../actions';
 import { Dispatch, bindActionCreators } from 'redux';
