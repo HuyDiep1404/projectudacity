@@ -204,7 +204,7 @@ export namespace EmployeeActions {
 
 export type EmployeeActions = Omit<typeof EmployeeActions, 'Type'>;
 export interface AddEmployeePayload {
-  employee: EmployeeModel;
+  employee: EmployeeAddModel;
 }
 
 export type EmployeePayloadType =  GetEmployeesResponse | Error;
