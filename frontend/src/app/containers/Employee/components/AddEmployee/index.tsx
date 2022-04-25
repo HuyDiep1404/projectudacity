@@ -4,7 +4,7 @@ import DatePicker from 'react-datepicker';
 
 import 'react-datepicker/dist/react-datepicker.css';
 import { Gender,EmployeeAddModel, SalaryType } from '../../models/EmployeeAddModel';
-import { EmployeeState } from '../../reducer/state';
+import { EmployeeAddState } from '../../reducer/stateAdd';
 import { EmployeeActions } from '../../actions';
 import { Dispatch, bindActionCreators } from 'redux';
 import { omit, confirmDialog } from 'app/utils';
@@ -163,7 +163,7 @@ class AddEmployee extends Component<AddEmployee.Props> {
       isActive: true,
     };
 
-    await this.props.actions.addEmployee(payload);
+    await this.props.actions.addEmployee2(payload);
   }
 
   handleTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -706,7 +706,7 @@ class AddEmployee extends Component<AddEmployee.Props> {
   }
 }
 
-function mapStateToProps(state: EmployeeState): Partial<AddEmployee.Props> {
+function mapStateToProps(state: EmployeeAddState): Partial<AddEmployee.Props> {
   return {
     employees: state.employees,
     isFetching: state.isFetching,
