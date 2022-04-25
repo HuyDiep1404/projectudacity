@@ -3,7 +3,7 @@ import Gravatar from 'react-gravatar';
 import DatePicker from 'react-datepicker';
 
 import 'react-datepicker/dist/react-datepicker.css';
-import { Gender, EmployeeModel, SalaryType } from '../../models/EmployeeModel';
+import { Gender, EmployeeAddModel,EmployeeModel, SalaryType } from '../../models/EmployeeModel';
 import { EmployeeState } from '../../reducer/state';
 import { EmployeeActions } from '../../actions';
 import { Dispatch, bindActionCreators } from 'redux';
@@ -21,7 +21,7 @@ import text from 'assets/translations';
 
 export namespace AddEmployee {
   export interface Props extends RouteComponentProps<void> {
-    employees: EmployeeModel[];
+    employees: EmployeeAddModel[];
     actions: EmployeeActions;
     isFetching: boolean;
     errorMessage: string;
@@ -138,22 +138,22 @@ class AddEmployee extends Component<AddEmployee.Props> {
     event.preventDefault();
     event.stopPropagation();
 
-    const payload: EmployeeModel = {
-      firstname: this.state.firstName,
-      lastname: this.state.lastName,
+    const payload: EmployeeAddModel = {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
       middlename: this.state.middleName,
       secondLastName: this.state.secondLastName,
-      displayname: this.state.displayName,
-      companyemail: this.state.companyEmail,
-      personalemail: this.state.personalEmail,
+      displayName: this.state.displayName,
+      companyEmail: this.state.companyEmail,
+      personalEmail: this.state.personalEmail,
       gender: this.state.gender,
       phoneNumber: this.state.phoneNumber,
       address: this.state.address,
       bankName: this.state.bankName,
       accountNumber: this.state.accountNumber,
       birthdate: this.state.birthdate,
-      startdate: this.state.startDate,
-      tags: JSON.stringify(this.state.tags),
+      startDate: this.state.startDate,
+      tags: this.state.tags,
       country: this.state.country,
       region: this.state.region,
       city: this.state.city,
