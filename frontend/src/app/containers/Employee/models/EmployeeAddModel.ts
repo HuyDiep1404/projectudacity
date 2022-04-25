@@ -31,3 +31,7 @@ export interface EmployeeAddModel {
     effectiveDate: Date;
     isActive: boolean;
   }
+  export namespace EmployeeAddModel {
+    export const dateFormat = 'M/D/YYYY';
+  }
+  
