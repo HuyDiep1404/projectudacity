@@ -17,7 +17,9 @@ export class HttpService {
       const queryParams = this.getQueryStringFromParams(options.params);
       newUrl = newUrl + queryParams;
     }
-    const response = await fetch(newUrl, {});
+    const response = await fetch(newUrl, { headers: {
+      'Access-Control-Allow-Origin' : '*',
+    }});
     switch (response.status) {
       case 500:
       case 404:
