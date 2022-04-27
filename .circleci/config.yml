@@ -396,7 +396,8 @@ jobs:
           workflow_id: ${CIRCLE_WORKFLOW_ID:0:7}  
       # Here's where you will  add some code to rollback on failure        
   cloudfront-update:
-    docker: amazon/aws-cli
+    docker: 
+      - image: amazon/aws-cli
     steps:
       - checkout
       - run:
